@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Клименко Богдана">
+    <title>Rosea | Контакти</title>
+    <style>
+        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; background: #fff0f5; color: #4a4a4a; }
+        header { background: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: bold; color: #d88398; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        nav a { text-decoration: none; color: #555; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #d88398; }
+        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+
+        /* Стилі сторінки */
+        .wrapper { display: flex; flex-wrap: wrap; max-width: 1000px; margin: 50px auto; gap: 30px; padding: 0 20px; }
+        .info, .form-container { flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        h2 { color: #d88398; margin-top: 0; }
+        .contact-item { margin-bottom: 20px; font-size: 1.1rem; }
+        .contact-item span { font-weight: bold; color: #555; display: block; }
+        
+        /* Форма */
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; box-sizing: border-box;}
+        button { background: #d88398; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: 0.3s; }
+        button:hover { background: #c0657b; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Rosea</a>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">Про нас</a>
+            <a href="contacts.html" class="active">Контакти</a>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="info">
+            <h2>Зв'яжіться з нами</h2>
+            <div class="contact-item">
+                <span>📍 Адреса:</span>
+                м. Київ, вул. Квіткова, 15
+            </div>
+            <div class="contact-item">
+                <span>📞 Телефон:</span>
+                +380 99 123 45 67
+            </div>
+            <div class="contact-item">
+                <span>✉️ Email:</span>
+                hello@rosea-shop.com
+            </div>
+            <div class="contact-item">
+                <span>🕒 Графік роботи:</span>
+                Щодня з 09:00 до 21:00
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Напишіть нам</h2>
+            <form action="#">
+                <label>Ваше ім'я</label>
+                <input type="text" placeholder="Іван" required>
+                
+                <label>Ваш email</label>
+                <input type="email" placeholder="email@example.com" required>
+                
+                <label>Повідомлення</label>
+                <textarea rows="4" placeholder="Текст повідомлення..."></textarea>
+                
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Rosea Shop. Created by Student.</p>
+    </footer>
+</body>
+</html>

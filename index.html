@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Клименко Богдана">
+    <title>Rosea | Головна</title>
+    <style>
+        /* Спільні стилі для всіх сторінок */
+        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; background: #fff0f5; color: #4a4a4a; }
+        header { background: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: bold; color: #d88398; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        nav a { text-decoration: none; color: #555; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #d88398; }
+        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        
+        /* Стилі для цієї сторінки */
+        .hero { text-align: center; padding: 100px 20px; background: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #d88398; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #777; }
+        .btn { background: #d88398; color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; transition: 0.3s; }
+        .btn:hover { background: #c0657b; }
+        .features { display: flex; justify-content: center; gap: 30px; padding: 50px 20px; flex-wrap: wrap; }
+        .feature-box { background: white; padding: 30px; border-radius: 10px; width: 250px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Rosea</a>
+        <nav>
+            <a href="index.html" class="active">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">Про нас</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Квіти, що говорять про почуття</h1>
+        <p>Найкращі букети з доставкою до ваших дверей</p>
+        <a href="catalog.html" class="btn">Обрати букет</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>🌸 Свіжість 24/7</h3>
+            <p>Ми гарантуємо свіжість кожної квітки у вашому букеті.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🚚 Швидка доставка</h3>
+            <p>Доставимо замовлення протягом 2-х годин по місту.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🎁 Авторський дизайн</h3>
+            <p>Унікальні композиції від наших флористів.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rosea Shop. Created by Student.</p>
+    </footer>
+</body>
+</html>
