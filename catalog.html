@@ -2,80 +2,23 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог квітів</title>
     <meta name="author" content="Клименко Богдана">
-    <title>Rosea | Каталог</title>
-    <style>
-        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; background: #fff0f5; color: #4a4a4a; }
-        header { background: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-size: 24px; font-weight: bold; color: #d88398; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
-        nav a { text-decoration: none; color: #555; margin-left: 20px; font-weight: 500; transition: 0.3s; }
-        nav a:hover, nav a.active { color: #d88398; }
-        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; }
-
-        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
-        h1 { text-align: center; color: #d88398; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; transition: transform 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card:hover { transform: translateY(-10px); }
-        .image-placeholder { height: 200px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #888; }
-        .details { padding: 20px; text-align: center; }
-        .price { color: #d88398; font-weight: bold; font-size: 1.2rem; margin: 10px 0; }
-        .buy-btn { display: inline-block; background: #333; color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; }
-        .buy-btn:hover { background: #d88398; }
-    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Rosea</a>
-        <nav>
-            <a href="index.html">Головна</a>
-            <a href="catalog.html" class="active">Каталог</a>
-            <a href="about.html">Про нас</a>
-            <a href="contacts.html">Контакти</a>
-        </nav>
-    </header>
+    <p>
+        <a href="index.html">Головна</a> |
+        <a href="catalog.html">Каталог</a> |
+        <a href="about.html">Про нас</a> |
+        <a href="contacts.html">Контакти</a>
+    </p>
 
-    <div class="container">
-        <h1>Наші букети</h1>
-        <div class="grid">
-            <div class="card">
-                <div class="image-placeholder">Фото Троянд</div>
-                <div class="details">
-                    <h3>Червона пристрасть</h3>
-                    <p class="price">1200 грн</p>
-                    <a href="#" class="buy-btn">Замовити</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image-placeholder">Фото Півоній</div>
-                <div class="details">
-                    <h3>Ніжний ранок</h3>
-                    <p class="price">950 грн</p>
-                    <a href="#" class="buy-btn">Замовити</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image-placeholder">Фото Тюльпанів</div>
-                <div class="details">
-                    <h3>Весняний настрій</h3>
-                    <p class="price">600 грн</p>
-                    <a href="#" class="buy-btn">Замовити</a>
-                </div>
-            </div>
-             <div class="card">
-                <div class="image-placeholder">Фото Мікс</div>
-                <div class="details">
-                    <h3>Авторський мікс</h3>
-                    <p class="price">1500 грн</p>
-                    <a href="#" class="buy-btn">Замовити</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Rosea Shop. Created by Student.</p>
-    </footer>
+    <h1>Наші квіти</h1>
+    <ul>
+        <li>Троянди червоні - 100 грн</li>
+        <li>Тюльпани ніжні - 50 грн</li>
+        <li>Півонії рожеві - 80 грн</li>
+        <li>Ромашки польові - 30 грн</li>
+    </ul>
 </body>
 </html>
