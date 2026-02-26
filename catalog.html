@@ -2,12 +2,66 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Rosea - Каталог</title>
+    <title>Флористична студія Rosea - Каталог</title>
     <meta name="author" content="Клименко Богдана">
-</head>
-<body bgcolor="#FFF0F5" text="#333333">
+    
+    <link rel="stylesheet" href="style.css">
 
-    <h2 align="center"> Каталог квітів </h2>
+    <style>
+        .product-card {
+            display: inline-block; 
+            width: 280px;
+            border: 2px solid #FFB6C1;
+            border-radius: 12px; 
+            padding: 20px; 
+            margin: 15px;
+            background-color: #FFFFFF;
+            vertical-align: top;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .detail-photo-link img {
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .detail-photo-link img:hover {
+            opacity: 0.8;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFF0F5;
+            border: 1px solid #A0526D;
+            color: #A0526D;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #FFE4E1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 align="center" id="main-title"> 🌸 Каталог авторських букетів 🌸 </h2>
     
     <p align="center">
         <a href="index.html">Головна</a> | 
@@ -17,41 +71,70 @@
     </p>
     <hr width="80%">
     
-    <h3>Галерея букетів</h3>
+    <h3 align="center">Оберіть розмір своєї композиції</h3>
     
-    <p>Базове фото (100x100):<br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/400px-Rosa_rubiginosa_1.jpg" width="100" height="100"></p>
-    <p>Збільшене в 2 рази (200x200):<br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/400px-Rosa_rubiginosa_1.jpg" width="200" height="200"></p>
-    <p>Зменшене в 2 рази (50x50):<br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/400px-Rosa_rubiginosa_1.jpg" width="50" height="50"></p>
-    
-    <p>Натисніть на картинку, щоб відкрити її в повному розмірі:</p>
-    <a href="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rosa_rubiginosa_1.jpg" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/400px-Rosa_rubiginosa_1.jpg" width="120" height="120" border="2"></a>
+    <center>
+        <div class="product-card">
+            <b>Міні-комплімент</b><br><br>
+            <img src="image/pic 1.jpg" width="200" height="200" alt="Міні букет"><br><br>
+            <small>Акуратний знак уваги для найрідніших.</small>
+        </div>
+
+        <div class="product-card">
+            <b>Стандартний букет</b><br><br>
+            <img src="image/pic 3.jpg" width="250" height="250" alt="Стандартний букет"><br><br>
+            <small>Класичний об'єм для ідеального подарунка.</small>
+        </div>
+
+        <div class="product-card">
+            <b>Королівський об'єм</b><br><br>
+            <img src="image/pic 2.jpg" width="280" height="280" alt="Великий букет"><br><br>
+            <small>Подвійний об'єм, що вражає з першого погляду.</small>
+        </div>
+        
+        <br><br>
+        <p><i>Бажаєте роздивитися деталі сорту? Натисніть на фото:</i></p>
+        <a href="image/pic 2.jpg" target="_blank" class="detail-photo-link">
+            <img src="image/pic 4.jpg" width="180" height="180" alt="Детальне фото квітки" border="2">
+        </a>
+    </center>
     
     <hr width="80%">
     
     <center>
-        <h3>Прайс-лист </h3>
-        <table border="1" cellpadding="10" cellspacing="0" width="70%" bgcolor="#FFFFFF">
-            <caption><b>Наш асортимент</b></caption>
-            <tr bgcolor="#FFB6C1">
-                <th>Троянди</th>
-                <th>Півонії</th>
-                <th>Тюльпани</th>
+        <h3>Популярні варіанти отримання замовлення</h3>
+        
+        <table class="styled-table">
+            <colgroup>
+                <col span="1" style="background-color: #FFE4E1;"> 
+                <col span="1" style="background-color: #F0F8FF;"> 
+                <col span="1" style="background-color: #FFF0F5;"> 
+            </colgroup>
+            
+            <tr>
+                <th>Експрес-доставка</th>
+                <th>Стандартна кур'єрська</th>
+                <th>Самовивіз з майстерні</th>
+            </tr>
+            <tr align="center" style="font-size: 40px;">
+                <td>🚐</td>
+                <td>🚲</td>
+                <td>🏪</td>
             </tr>
             <tr align="center">
-               <td><img src="https://blog.florium.ua/wp-content/uploads/2020/10/planting-roses-cover.jpg" width="60" height="60"></td>
-                <td><img src="https://raiflora.com.ua/image/catalog/news/koly-sadyty-pivonii/koly-sadyty-pivonii.webp" width="60" height="60"></td>
-                <td><img src="https://leto.ua/img/articles/1643722275_54a4507c816ece500c8f.jpg" width="60" height="60"></td>
+                <td>Доставка протягом 2-3 годин</td>
+                <td>У зручний для вас час<br>(з 9:00 до 18:00)</td>
+                <td>Готово до видачі через 1 годину<br>(з 10:00 до 19:00)</td>
             </tr>
             <tr align="center">
-                <td><a href="#">Замовити</a></td>
-                <td><a href="#">Замовити</a></td>
-                <td><a href="#">Замовити</a></td>
+                <td><b>Вартість: 300 грн</b></td>
+                <td><b>Вартість: 150 грн</b><br><small>(безкоштовно від 2000 грн)</small></td>
+                <td><b>Безкоштовно</b></td>
             </tr>
             <tr align="center">
-                <td>Ціна: 1500 грн</td>
-                <td>Ціна: 2000 грн</td>
-                <td>Ціна: 900 грн</td>
+                <td><a href="#" class="action-btn">Вибрати</a></td>
+                <td><a href="#" class="action-btn">Вибрати</a></td>
+                <td><a href="#" class="action-btn">Вибрати</a></td>
             </tr>
         </table>
     </center>

@@ -1,0 +1,77 @@
+/* === ОФОРМЛЕННЯ BODY ТА ТЕКСТУ === */
+body {
+    background-color: #FFF0F5; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: #333333; 
+    line-height: 1.6; 
+}
+
+/* === ОФОРМЛЕННЯ ЗАГОЛОВКІВ === */
+h2, h3, h4 {
+    color: #A0526D;
+    text-align: center; 
+    font-style: normal; 
+}
+
+/* Унікальний ідентифікатор для головного заголовка */
+#main-title {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+/*  ОФОРМЛЕННЯ ПОСИЛАНЬ  */
+a {
+    color: #D88398;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #FF1493; /* Колір при наведенні мишки */
+}
+
+/* ОГОЛОШЕННЯ !IMPORTANT  */
+.highlight {
+    color: #FF0000 !important; 
+}
+
+/* === СТИЛІ ДЛЯ СПИСКІВ  === */
+/* Клас для маркованих і нумерованих списків */
+.custom-list {
+    background-color: #FFFFFF; 
+    border: 2px dashed #FFB6C1; 
+    padding: 20px; 
+    margin: 15px auto; 
+    width: 60%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Клас для списку визначень  */
+.dict {
+    background-color: #FFE4E1;
+    border-left: 5px solid #A0526D;  
+    padding: 10px 20px;
+    margin: 20px auto;
+    width: 60%;
+}
+
+/* === СТИЛІ ДЛЯ ТАБЛИЦЬ === */
+.styled-table {
+    width: 80%; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    background-color: #FFFFFF; 
+    border: 3px solid #A0526D; 
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #FFB6C1; 
+    padding: 15px; 
+    text-align: center; 
+}
+
+.styled-table th {
+    background-color: #FFB6C1; 
+    color: #FFFFFF;
+    font-size: 18px;
+}
