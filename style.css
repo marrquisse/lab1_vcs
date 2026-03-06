@@ -36,7 +36,6 @@ a:hover {
 }
 
 /* === СТИЛІ ДЛЯ СПИСКІВ  === */
-/* Клас для маркованих і нумерованих списків */
 .custom-list {
     background-color: #FFFFFF; 
     border: 2px dashed #FFB6C1; 
@@ -46,7 +45,6 @@ a:hover {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Клас для списку визначень  */
 .dict {
     background-color: #FFE4E1;
     border-left: 5px solid #A0526D;  
