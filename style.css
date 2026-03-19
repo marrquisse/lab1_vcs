@@ -66,3 +66,20 @@ a:hover {
     color: #FFFFFF;
     font-size: 18px;
 }
+
+/* Контекстний селектор */
+.product-card b {
+    color: #800080;
+}
+
+/* Дочірній селектор */
+.custom-list > li {
+    padding-bottom: 5px;
+    color: #A0526D;
+}
+
+/* Сусідній селектор */
+h3 + p {
+    font-weight: bold;
+    text-decoration: underline;
+}
