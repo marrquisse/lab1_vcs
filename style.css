@@ -67,19 +67,73 @@ a:hover {
     font-size: 18px;
 }
 
-/* Контекстний селектор */
 .product-card b {
     color: #800080;
 }
 
-/* Дочірній селектор */
 .custom-list > li {
     padding-bottom: 5px;
     color: #A0526D;
 }
 
-/* Сусідній селектор */
 h3 + p {
     font-weight: bold;
     text-decoration: underline;
+}
+/* Позиціювання та плаваючі елементи */
+.promo-box {
+    position: relative; 
+    border: 2px solid #A0526D;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    background-color: #FFFFFF;
+}
+
+.promo-badge {
+    position: absolute; 
+    top: -10px;
+    right: -10px;
+    background-color: #FF1493;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.promo-float {
+    float: left; 
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    background-color: #FFE4E1;
+    border-radius: 5px;
+}
+
+/* Рядковий елемент span */
+span.promo-text {
+    background-color: #FFB6C1;
+    padding: 2px 5px;
+}
+
+/* Псевдокласи для посилань */
+a.promo-link:link { color: #0000CD; }
+a.promo-link:visited { color: #4B0082; }
+a.promo-link:active { color: #FF0000; }
+
+/* Псевдоклас :first-child (робить перший пункт списку жирним) */
+.custom-list li:first-child {
+    font-weight: bold;
+}
+
+/* Псевдоелементи :before та :after */
+.promo-quote::before {
+    content: "« ";
+    color: #A0526D;
+    font-weight: bold;
+}
+
+.promo-quote::after {
+    content: " »";
+    color: #A0526D;
+    font-weight: bold;
 }
