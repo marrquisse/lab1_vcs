@@ -1,5 +1,3 @@
-// === КВІТКОВИЙ СКРИПТ (Лабораторна 6) ===
-
 // 1. Функція вибору кількості квітів (змінні, розгалуження, цикли while/if-else)
 function selectQuantity() {
     let count = prompt("Скільки троянд ви б хотіли у свій ідеальний букет?", "15");
@@ -8,7 +6,7 @@ function selectQuantity() {
     while (isOrdering) {
         if (count === null) {
             alert("Замовлення скасовано. Чекаємо на вас знову!");
-            break; // Вихід, якщо натиснули "Скасувати"
+            break; 
         }
 
         let number = parseInt(count);
@@ -45,11 +43,11 @@ function compareBouquetsDescription(str1, str2) {
 // 4. Функція зміни фону (Об'єкт document + setTimeout)
 function activateRomanticMode() {
     let originalColor = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = "#FFFACD"; // Змінюємо на теплий кремовий
+    document.body.style.backgroundColor = "#FFFACD"; 
     alert("Включено романтичне освітлення на 30 секунд!");
 
     setTimeout(() => {
-        document.body.style.backgroundColor = originalColor; // Повертаємо назад
+        document.body.style.backgroundColor = originalColor; 
     }, 30000);
 }
 
@@ -91,13 +89,13 @@ function populateBouquetOfTheWeek() {
     container.prepend(document.createElement("hr")); 
     container.after(newBtn); 
 
-    // replaceWith (Заміна вузла)
+    // replaceWith 
     let oldPara = document.getElementById("replace-me");
     let newPara = document.createElement("p");
     newPara.innerHTML = "<i>⭐⭐⭐⭐⭐ «Неймовірний букет, дівчина в захваті!» — Максим</i>";
     oldPara.replaceWith(newPara); 
 
-    // remove (Видалення вузла)
+    // remove 
     let removePara = document.getElementById("remove-me");
     if(removePara) removePara.remove(); 
 
