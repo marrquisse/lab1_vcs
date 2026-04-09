@@ -1,94 +1,105 @@
-// 1. Власна функція "Діалог з користувачем" (змінні, розгалуження, цикли)
-function userDialog() {
+// === КВІТКОВИЙ СКРИПТ (Лабораторна 6) ===
+
+// 1. Функція вибору кількості квітів (змінні, розгалуження, цикли while/if-else)
+function selectQuantity() {
+    let count = prompt("Скільки троянд ви б хотіли у свій ідеальний букет?", "15");
     let isOrdering = true;
+
     while (isOrdering) {
-        let count = prompt("Скільки троянд ви б хотіли у свій ідеальний букет?", "15");
-        
         if (count === null) {
-            alert("Скасовано. Чекаємо на вас знову!");
-            break; // Вихід з циклу, якщо натиснули "Скасувати"
+            alert("Замовлення скасовано. Чекаємо на вас знову!");
+            break; // Вихід, якщо натиснули "Скасувати"
         }
 
         let number = parseInt(count);
         if (isNaN(number) || number <= 0) {
-            alert("Будь ласка, введіть коректне число.");
-        } else if (number >= 101) {
-            alert("Ого! 101+ троянд — це розкішно. Для вас діятиме VIP-знижка.");
+            count = prompt("Будь ласка, введіть коректну кількість троянд цифрами.", "15");
+        } else if (number > 101) {
+            count = prompt("Ого, 101+ троянд — це розкішно! Введіть меншу кількість для автоматичного прорахунку або зателефонуйте нам.", "15");
+        } else if (number >= 50) {
+            alert(`Кількість квітів: ${number}. Це буде справді величний букет!`);
             isOrdering = false;
         } else {
-            alert(`Чудово! Ваш букет з ${number} троянд буде зібрано з любов'ю.`);
+            alert(`Кількість квітів: ${number}. Свіжий букет буде зібрано найближчим часом!`);
             isOrdering = false;
         }
     }
 }
 
-// 2. Функція виводу інформації про розробника (з параметром за замовчуванням)
-function showDevInfo(lastName, firstName, position = "Флорист-розробник") {
-    alert(`Розробник сторінки:\nПрізвище: ${lastName}\nІм'я: ${firstName}\nПосада: ${position}`);
+// 2. Функція виводу інформації (з параметром за замовчуванням)
+function showFloristInfo(lastName, firstName, position = "Флорист-дизайнер") {
+    alert(`Наш провідний спеціаліст:\n\nПрізвище: ${lastName}\nІм'я: ${firstName}\nПосада: ${position}\n\nДякуємо за довіру до нашої студії!`);
 }
 
 // 3. Функція порівняння двох рядків
-function compareStrings(str1, str2) {
+function compareBouquetsDescription(str1, str2) {
     if (str1.length > str2.length) {
-        alert(`Більший рядок: "${str1}"`);
+        alert(`Порівняння назв:\n\nДовша назва: "${str1}"`);
     } else if (str2.length > str1.length) {
-        alert(`Більший рядок: "${str2}"`);
+        alert(`Порівняння назв:\n\nДовша назва: "${str2}"`);
     } else {
-        alert("Рядки повністю однакові за довжиною!");
+        alert("Назви мають однакову кількість символів!");
     }
 }
 
-// 4. Зміна фону сторінки на 30 секунд (Робота з document)
-function changeBgFor30Sec() {
+// 4. Функція зміни фону (Об'єкт document + setTimeout)
+function activateRomanticMode() {
     let originalColor = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = "#E6E6FA"; 
-    alert("Фон сторінки змінено на 30 секунд!");
+    document.body.style.backgroundColor = "#FFFACD"; // Змінюємо на теплий кремовий
+    alert("Включено романтичне освітлення на 30 секунд!");
 
     setTimeout(() => {
-        document.body.style.backgroundColor = originalColor; 
+        document.body.style.backgroundColor = originalColor; // Повертаємо назад
     }, 30000);
 }
 
-// 5. Перенаправлення браузера (Робота з location)
-function redirectPage() {
-    alert("Зараз вас буде перенаправлено на сторінку Каталогу.");
+// 5. Перенаправлення браузера (Об'єкт location)
+function gotoCatalog() {
+    alert("Зараз вас буде перенаправлено до нашого повного каталогу...");
     location.href = "catalog.html";
 }
 
-// 6. Маніпуляції з DOM-деревом
-function runDOMManipulations() {
+// 6. Маніпуляції з DOM (Завантаження Спеціальної пропозиції)
+function populateBouquetOfTheWeek() {
     // getElementById та querySelectorAll
     let container = document.getElementById("dom-test-container");
     let items = document.querySelectorAll(".dom-item");
 
-    // Властивості DOM-вузла (innerHTML, textContent, outerHTML)
-    items[0].innerHTML = "<b>Текст змінено через innerHTML (теги працюють)</b>";
-    items[1].textContent = "Змінено через textContent (теги ігноруються)";
-    items[2].outerHTML = "<p class='dom-item' style='color: blue;'>Змінено через outerHTML (замінило весь тег)</p>";
+    // innerHTML, textContent, outerHTML
+    items[0].innerHTML = "<b>Елегантна композиція з рожевих півоній та евкаліпта.</b>";
+    items[1].textContent = "Склад: Півонії (7 шт), Евкаліпт, Стрічка.";
+    items[2].outerHTML = "<p class='dom-item' style='color: green; font-weight: bold;'>Сьогодні доставка цього букета — безкоштовна!</p>";
 
-    // nodeValue / data (змінюємо прихований коментар)
+    // nodeValue / data (змінюємо прихований коментар HTML)
     let firstNode = container.firstChild;
-    if (firstNode.nodeType === 8) { // 8 означає вузол коментаря
-        firstNode.data = " Цей коментар було змінено через JS data ";
+    if (firstNode && firstNode.nodeType === 8) { 
+        firstNode.data = " Дані успішно завантажені скриптом ";
     }
 
-    // Створення елементів (createElement, createTextNode)
+    // createElement, createTextNode, append
     let newBtn = document.createElement("button");
-    let btnText = document.createTextNode("Я нова кнопка з JS!");
-    newBtn.append(btnText); // append (вставка тексту в кнопку)
+    let btnText = document.createTextNode("💳 Оформити замовлення");
+    newBtn.append(btnText); 
+    newBtn.style.padding = "8px 15px";
+    newBtn.style.backgroundColor = "#FF1493";
+    newBtn.style.color = "white";
+    newBtn.style.border = "none";
+    newBtn.style.borderRadius = "5px";
+    newBtn.style.cursor = "pointer";
 
-    // Вставка (prepend, after)
-    container.prepend(document.createElement("hr")); // prepend (на самий початок контейнера)
-    container.after(newBtn); // after (вставити одразу ПІСЛЯ контейнера)
+    // prepend, after
+    container.prepend(document.createElement("hr")); 
+    container.after(newBtn); 
 
-    // Заміна та видалення (replaceWith, remove)
+    // replaceWith (Заміна вузла)
     let oldPara = document.getElementById("replace-me");
     let newPara = document.createElement("p");
-    newPara.innerHTML = "<i>Цей абзац успішно ЗАМІНЕНО (replaceWith)</i>";
+    newPara.innerHTML = "<i>⭐⭐⭐⭐⭐ «Неймовірний букет, дівчина в захваті!» — Максим</i>";
     oldPara.replaceWith(newPara); 
 
+    // remove (Видалення вузла)
     let removePara = document.getElementById("remove-me");
-    removePara.remove(); 
+    if(removePara) removePara.remove(); 
 
-    alert("Маніпуляції виконано! Подивіться на текстовий блок внизу.");
+    alert("✨ Спеціальну пропозицію успішно згенеровано!");
 }

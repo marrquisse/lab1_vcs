@@ -32,7 +32,6 @@
     
     <p>👇 <a href="#footer">Швидко переміститися до підвалу сайту</a></p>
     
-     <!-- Лаб5 -->
     <div class="promo-box">
         <div class="promo-badge">Акція</div>
         
@@ -44,10 +43,7 @@
             Найкращий подарунок — це <span class="promo-text">увага</span>.
         </p>
         
-        <p>
-            Деталі тут: 
-            <a href="catalog.html" class="promo-link">Секретна пропозиція</a>
-        </p>
+        <p>Деталі тут: <a href="catalog.html" class="promo-link">Секретна пропозиція</a></p>
         
         <div style="clear: both;"></div>
     </div>
@@ -57,49 +53,55 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.662660127598!2d30.457816615731056!3d50.44737277947472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cecc8266205f%3A0x442df1550c6fb02b!2z0JrQuNGX0LLRgdGM0LrQuNC5INC_0L7Qu9GW0YLQtdGF0L3RltGH0L3QuNC5INGW0L3RgdGC0LjRgtGD0YI!5e0!3m2!1suk!2sua!4v1680000000000!5m2!1suk!2sua" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </center>
     
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     
-     <!-- лаб6 -->
     <script>
-        document.write("<div style='text-align: center; background: #FFF0F5; padding: 10px; margin: 20px auto; width: 80%; border: 2px solid #D88398;'>");
-        document.write("<h4>Привіт! Цей блок згенеровано без HTML, тільки за допомогою <b>document.write()</b> у внутрішньому скрипті.</h4>");
+        document.write("<div style='text-align: center; background-color: #FFFFFF; padding: 25px; margin: 30px auto; width: 80%; border: 3px solid #D88398; border-radius: 12px; box-shadow: 0 8px 15px rgba(0,0,0,0.1);'>");
+        document.write("<h3 style='color: #A0526D; font-size: 28px; margin-bottom: 10px; font-style: italic;'>Вітаємо в онлайн-майстерні 'Rosea'!</h3>");
+        document.write("<p style='font-size: 18px; color: #777777;'>Скористайтеся нашими інтерактивними сервісами для швидкого вибору ідеального букета.</p>");
         document.write("</div>");
 
-        // Функція для внутрішнього скрипта (alert, prompt, confirm)
+        // Внутрішній скрипт: confirm, prompt, alert
         function runInternalScript() {
-            let isReady = confirm("Ви готові розпочати тестування JavaScript?");
+            let isReady = confirm("Бажаєте скористатися асистентом для швидкого підбору букета?");
             if (isReady) {
-                let mood = prompt("Опишіть ваш настрій одним словом:", "Супер");
-                alert("Ваш настрій: " + mood + ". Це чудово!");
+                let mood = prompt("Для якої події ви шукаєте квіти? (наприклад: Побачення, Ювілей, Свято):", "Побачення");
+                if(mood) {
+                    alert(`Чудово! Подія "${mood}" — це завжди щось особливе. Наші флористи допоможуть.`);
+                }
             } else {
-                alert("Нічого страшного, спробуємо пізніше.");
+                alert("Немає проблем! Ви завжди можете переглянути наш каталог нижче.");
             }
         }
     </script>
 
-    <div style="text-align: center; border: 3px solid #A0526D; padding: 20px; width: 80%; margin: 20px auto; background-color: #FFFFFF;">
-        <h3>Тестування JavaScript (Лабораторна 6)</h3>
+    <div style="text-align: center; border: 3px solid #A0526D; border-radius: 12px; padding: 30px; width: 80%; margin: 20px auto; background-color: #FFFFFF; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+        <h3 style="font-size: 24px; margin-bottom: 20px;">Інтерактивні послуги студії</h3>
         
-        <button onclick="runInternalScript()" style="margin: 5px;">1. Внутрішній: confirm, prompt</button>
-        <button onclick="userDialog()" style="margin: 5px;">2. Діалог (while, if, else)</button>
-        <button onclick="showDevInfo('Клименко', 'Богдана')" style="margin: 5px;">3. Інфо розробника</button>
-        <button onclick="compareStrings('Троянда', 'Півонія')" style="margin: 5px;">4. Порівняти рядки</button>
-        <button onclick="changeBgFor30Sec()" style="margin: 5px;">5. Змінити фон на 30 сек</button>
-        <button onclick="redirectPage()" style="margin: 5px;">6. location (Редирект)</button>
-        <button onclick="runDOMManipulations()" style="margin: 5px;">7. Маніпуляції з DOM</button>
+        <button onclick="runInternalScript()" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">1. Асистент (Внутр. скрипт)</button>
+        <button onclick="selectQuantity()" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">2. Калькулятор троянд</button>
+        <button onclick="showFloristInfo('Клименко', 'Богдана')" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">3. Наш флорист</button>
+        <button onclick="compareBouquetsDescription('Букет Океан Ніжності', 'Кошик Весняний')" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">4. Порівняти назви</button>
+        <button onclick="activateRomanticMode()" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">5. Романтичний фон (30с)</button>
+        <button onclick="gotoCatalog()" style="padding: 10px; background-color: #FFF0F5; border: 2px solid #D88398; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;">6. Перейти до вітрини</button>
+        
+        <br><br>
+        <button onclick="populateBouquetOfTheWeek()" style="padding: 12px 25px; background-color: #D88398; border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; font-size: 16px;">✨ Завантажити 'Спеціальну пропозицію' ✨</button>
 
-        <hr>
-        <div id="dom-test-container" style="text-align: left; padding: 15px; border: 1px dashed #FF1493; width: 60%; margin: 0 auto;">
-            <p class="dom-item">Елемент 1 (зміниться через innerHTML)</p>
-            <p class="dom-item">Елемент 2 (зміниться через textContent)</p>
-            <p class="dom-item">Елемент 3 (зміниться через outerHTML)</p>
-            <p id="replace-me">Цей текст буде повністю замінено на інший.</p>
-            <p id="remove-me">Цей текст буде знищено методом remove().</p>
+        <hr style="margin: 25px 0; border: 1px solid #FFE4E1;">
+        
+        <div id="dom-test-container" style="text-align: left; padding: 25px; border: 2px dashed #FF1493; border-radius: 10px; width: 70%; margin: 0 auto; background-color: #FFFAFA;">
+            <h4 style="text-align: center; margin-top: 0; font-size: 20px;">Спеціальна пропозиція</h4>
+            <p class="dom-item" style="color: #555;">[Очікування даних від флориста...]</p>
+            <p class="dom-item" style="color: #555;">[Очікування складу букета...]</p>
+            <p class="dom-item" style="color: #555;">[Очікування акційної ціни...]</p>
+            <p id="replace-me" style="font-style: italic; color: #888;">Відгуки клієнтів оновлюються...</p>
+            <p id="remove-me" style="color: #D8000C; font-weight: bold;">Увага: Цей текст зникне після завантаження!</p>
         </div>
     </div>
 
     <script src="script.js"></script>
-     <!-- лаб6 -->
+    
     <hr width="80%">
     <p id="footer" align="center"><small>© 2026 Флористична студія "Rosea". Всі права захищено. Даруємо красу щодня.</small></p>
 
