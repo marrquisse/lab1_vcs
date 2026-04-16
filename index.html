@@ -100,6 +100,48 @@
         </div>
     </div>
 
+  
+    <div style="text-align: center; border: 3px solid #D88398; border-radius: 12px; padding: 30px; width: 80%; margin: 20px auto; background-color: #FFF0F5; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+        <h3 style="font-size: 24px; margin-bottom: 20px; color: #A0526D;">Ексклюзивні пропозиції та Фільтри</h3>
+        
+        <div>
+            <img id="promo-image" src="image/pic 2.jpg" alt="Букет дня" width="250" style="border-radius: 10px; cursor: pointer; transition: 0.3s; border: 2px solid #FFB6C1;">
+            <br><br>
+            <button onclick="likeBouquet()" style="padding: 10px 20px; background-color: #FF1493; border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; margin: 5px;">❤️ Вподобати букет</button>
+            
+            <button id="subscribe-btn" style="padding: 10px 20px; background-color: #A0526D; border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; margin: 5px;">📩 Підписатися на новинки</button>
+        </div>
+
+        <hr style="margin: 25px 0; border: 1px solid #FFFFFF;">
+
+        <div id="secret-box" style="padding: 15px; background-color: #FFFFFF; border: 2px dashed #A0526D; border-radius: 8px; cursor: pointer; color: #A0526D; font-weight: bold; transition: 0.3s;">
+            🎁 Клікніть тут, щоб отримати таємний промокод!
+        </div>
+
+        <hr style="margin: 25px 0; border: 1px solid #FFFFFF;">
+
+        <h4 style="color: #A0526D; margin-bottom: 10px;">Оберіть улюблену категорію:</h4>
+        <ul id="category-list" style="list-style: none; padding: 0; display: inline-block; text-align: left; background: white; padding: 15px; border-radius: 8px; border: 1px solid #FFB6C1; cursor: pointer; width: 50%;">
+            <li style="padding: 8px; border-bottom: 1px solid #eee; transition: 0.2s;">🌹 Еквадорські троянди</li>
+            <li style="padding: 8px; border-bottom: 1px solid #eee; transition: 0.2s;">🌷 Голландські тюльпани</li>
+            <li style="padding: 8px; border-bottom: 1px solid #eee; transition: 0.2s;">🌸 Ніжні півонії</li>
+            <li style="padding: 8px; transition: 0.2s;">🌻 Соняшники</li>
+        </ul>
+
+        <div id="action-menu" style="margin-top: 20px;">
+            <button data-action="sortByPrice" style="padding: 8px 15px; margin: 5px; border-radius: 5px; border: 2px solid #A0526D; background: white; color: #A0526D; font-weight: bold; cursor: pointer; transition: 0.2s;">💰 За ціною</button>
+            <button data-action="showPopular" style="padding: 8px 15px; margin: 5px; border-radius: 5px; border: 2px solid #A0526D; background: white; color: #A0526D; font-weight: bold; cursor: pointer; transition: 0.2s;">🔥 Популярні</button>
+            <button data-action="resetFilters" style="padding: 8px 15px; margin: 5px; border-radius: 5px; border: 2px solid #A0526D; background: white; color: #A0526D; font-weight: bold; cursor: pointer; transition: 0.2s;">❌ Скинути фільтри</button>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <button data-behavior="counter" data-count="0" style="padding: 10px 25px; background-color: #FFFFFF; border: 2px solid #FF1493; border-radius: 5px; color: #FF1493; font-weight: bold; cursor: pointer; transition: 0.2s; font-size: 16px;">
+                👍 Оцінити магазин: 0
+            </button>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
     
     <hr width="80%">
