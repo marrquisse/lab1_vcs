@@ -236,7 +236,7 @@ function initLab8Events() {
     // --- DRAG-AND-DROP ---
     let dragFlower = document.getElementById("draggable-flower");
     let dropBasket = document.getElementById("drop-basket");
-    let originalParent = dragFlower ? dragFlower.parentNode : null; // Запам'ятовуємо, де квітка була спочатку
+    let originalParent = dragFlower ? dragFlower.parentNode : null; 
 
     if (dragFlower && dropBasket) {
         
@@ -268,7 +268,7 @@ function initLab8Events() {
                 if (droppableBelow) {
                     dropBasket.style.backgroundColor = '#FFE4E1'; 
                 } else {
-                    dropBasket.style.backgroundColor = '#FFFAFA'; // ВИПРАВЛЕНО КОЛІР
+                    dropBasket.style.backgroundColor = '#FFFAFA'; 
                 }
             }
 
@@ -283,9 +283,9 @@ function initLab8Events() {
                 dragFlower.style.display = 'flex';
 
                 if (elemBelow && elemBelow.closest('#drop-basket')) {
-                    // Успішний Drop! Ховаємо квітку і показуємо красивий букет
+                    // Успішний Drop! 
                     dragFlower.style.display = 'none';
-                    dropBasket.textContent = "💐"; // Без плюсів! Тільки букет
+                    dropBasket.textContent = "💐"; 
                     dropBasket.style.backgroundColor = "#D88398";
                     
                     setTimeout(() => {
@@ -293,20 +293,20 @@ function initLab8Events() {
                         
                         // Відновлюємо кошик
                         dropBasket.textContent = "🧺";
-                        dropBasket.style.backgroundColor = "#FFFAFA"; // ВИПРАВЛЕНО КОЛІР
+                        dropBasket.style.backgroundColor = "#FFFAFA"; 
                         
                         // Повертаємо квітку на її рідне місце
                         originalParent.append(dragFlower);
-                        dragFlower.style.position = ''; // Знімаємо absolute
+                        dragFlower.style.position = ''; 
                         dragFlower.style.left = '';
                         dragFlower.style.top = '';
                         dragFlower.style.zIndex = '';
-                        dragFlower.style.display = 'flex'; // Показуємо знову
+                        dragFlower.style.display = 'flex'; 
                         
                     }, 50);
                 } else {
-                    // Кинули повз кошик — повертаємо колір
-                    dropBasket.style.backgroundColor = '#FFFAFA'; // ВИПРАВЛЕНО КОЛІР
+
+                    dropBasket.style.backgroundColor = '#FFFAFA'; 
                 }
             };
         };
@@ -317,7 +317,7 @@ function initLab8Events() {
     }
 }
 
-// ЄДИНИЙ window.onload, який запускає обидві лаби
+
 window.onload = function() {
     initLab7Events(); 
     initLab8Events(); 
