@@ -144,6 +144,39 @@
 
     <script src="script.js"></script>
     
+    <div style="text-align: center; border: 3px solid #D88398; border-radius: 12px; padding: 30px; width: 80%; margin: 20px auto; background-color: #FFF0F5;">
+    <h3 style="font-size: 24px; margin-bottom: 20px; color: #A0526D;">💐 Створи свій букет </h3>
+
+    <div id="flower-info-zone" style="padding: 15px; border: 2px dashed #A0526D; border-radius: 8px; background: white; margin-bottom: 30px;">
+        <p style="color: #555; margin-bottom: 10px;">Наведи курсор на квіти, щоб дізнатися їхнє значення:</p>
+        
+        <div id="gallery-container" style="display: flex; justify-content: center; gap: 20px;">
+            <div class="flower-item" data-info="Троянда — класичний символ палкого кохання." style="padding: 10px 20px; border: 2px solid #FFB6C1; border-radius: 8px; cursor: pointer; transition: 0.3s; background-color: #FFF;">🌹 Троянда</div>
+            <div class="flower-item" data-info="Тюльпан — вісник весни та ніжності." style="padding: 10px 20px; border: 2px solid #FFB6C1; border-radius: 8px; cursor: pointer; transition: 0.3s; background-color: #FFF;">🌷 Тюльпан</div>
+            <div class="flower-item" data-info="Соняшник — тепло, радість та життєва енергія." style="padding: 10px 20px; border: 2px solid #FFB6C1; border-radius: 8px; cursor: pointer; transition: 0.3s; background-color: #FFF;">🌻 Соняшник</div>
+        </div>
+        
+        <p id="info-display" style="font-weight: bold; color: #FF1493; margin-top: 15px; height: 20px;">...</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 20px; padding: 20px; background: white; border-radius: 8px;">
+        
+        <div>
+            <h4 style="color: #A0526D; margin-bottom: 15px;">Візьми квітку:</h4>
+            <div id="draggable-flower" style="font-size: 60px; cursor: grab; user-select: none; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center; z-index: 1000;">
+                🌸
+            </div>
+        </div>
+
+        <div>
+            <h4 style="color: #A0526D; margin-bottom: 15px;">Поклади у кошик:</h4>
+            <div id="drop-basket" style="width: 150px; height: 150px; border: 4px dashed #D88398; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 70px; background-color: #FFFAFA; transition: background 0.3s;">
+                🧺
+            </div>
+        </div>
+    </div>
+</div>
+    
     <hr width="80%">
     <p id="footer" align="center"><small>© 2026 Флористична студія "Rosea". Всі права захищено. Даруємо красу щодня.</small></p>
 
